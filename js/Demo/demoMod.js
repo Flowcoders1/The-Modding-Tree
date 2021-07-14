@@ -1,7 +1,4 @@
 let modInfo = {
-	name: "The Modding Tree",
-	id: "modbase",
-	pointsName: "points",
 	modFiles: ["Demo/layers/c.js", "Demo/layers/f.js", "Demo/layers/a.js", "Demo/demoTree.js"],
 
 
@@ -17,10 +14,11 @@ let VERSION = {
 	name: "Fixed Reality",
 }
 
+function canGenPoints(){
+	return hasUpgrade("c", 11)
+}
 let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
@@ -31,7 +29,6 @@ function getStartPoints(){
     return new Decimal(modInfo.initialStartPoints)
 }
 
-// Determines if it should show points/sec
 function canGenPoints(){
 	return hasUpgrade("c", 11)
 }
