@@ -1,8 +1,8 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	name: "The Flowism Tree",
+	id: "flowismsaves",
+	author: "Flowism",
+	pointsName: "Flow",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -19,7 +19,7 @@ let VERSION = {
 
 let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.0</h3><br>
-		- Added things.<br>
+		- Initial Release.<br>
 		- Added stuff.`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
@@ -34,7 +34,7 @@ function getStartPoints(){
 
 // Determines if it should show points/sec
 function canGenPoints(){
-	return true
+	return hasUpgrade("p", 11)
 }
 
 // Calculate points/sec!
